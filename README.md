@@ -10,4 +10,3 @@
 - 🧾 **Formateo Avanzado de JSON**: Transforma cualquier entrada JSON en una estructura legible.
 - 📦 **Minimización de JSON**: Convierte tu JSON en una forma compacta para almacenamiento o transmisión.
 - 🛡 **Validación Robusta**: Garantiza que tu entrada corresponda a un formato JSON válido.
-- 🚀 **Interfaz Optimizada**: Rápida, responsive y estéticamente agradable.
