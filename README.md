@@ -1,4 +1,4 @@
-# # JSON Viewer & Editor Pro
+# JSON Viewer & Editor Pro
 
 ## Descripción
 
