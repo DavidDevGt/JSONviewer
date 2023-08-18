@@ -1,0 +1,72 @@
+/* Estilos para el modo claro */
+body.light {
+    background-color: #f5f5f5;
+    color: #333;
+    margin-bottom: 60px;  /* Espacio adicional para el footer fijo */
+}
+
+/* Estilos para el modo oscuro */
+body.dark {
+    background-color: #2c2c2c;
+    color: #e8e8e8;
+    margin-bottom: 60px;  /* Espacio adicional para el footer fijo */
+}
+
+/* Estilo específico para el editor y la vista previa en modo oscuro */
+body.dark .code-editor,
+body.dark .code-preview {
+    background-color: #1e1e1e;
+    color: #b5b5b5;
+}
+
+/* Estilo específico para el editor y la vista previa en modo claro */
+body.light .code-editor,
+body.light .code-preview {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Estilos generales para el editor y la vista previa */
+.code-editor,
+.code-preview {
+    border-radius: 5px;
+    padding: 15px;
+}
+
+/* Estilo para el footer en modo claro */
+body.light footer {
+    background-color: #f1f1f1;    /* Color de fondo */
+    color: #333;                  /* Color del texto */
+    border-top: 1px solid #e0e0e0; /* Borde superior del footer */
+}
+
+/* Estilo para el footer en modo oscuro */
+body.dark footer {
+    background-color: #2c2c2c;    /* Color de fondo */
+    color: #e8e8e8;               /* Color del texto */
+    border-top: 1px solid #444;   /* Borde superior oscuro para el modo oscuro */
+}
+
+/* Estilo general del footer */
+footer {
+    padding: 20px 0;              /* Espacio arriba y abajo del contenido */
+    font-size: 14px;              /* Tamaño de la fuente */
+    position: fixed;              /* Fijar el footer en la parte inferior */
+    bottom: 0;                    /* Alinear al borde inferior de la ventana */
+    width: 100%;                  /* Ancho completo */
+    z-index: 1000;                /* Asegurar que el footer esté sobre otros elementos */
+}
+
+/* Mejora la interactividad con un hover */
+footer a:hover {
+    text-decoration: underline;   /* Subrayar enlaces al pasar el mouse por encima */
+}
+
+a {
+    text-decoration: none; /* elimina el subrayado */
+    color: inherit; /* usa el color heredado del elemento padre */
+}
+
+a:hover {
+    text-decoration: underline; /* subraya al pasar el mouse por encima */
+}
