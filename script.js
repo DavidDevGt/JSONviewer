@@ -8,7 +8,7 @@ new Vue({
     },
     computed: {
         modeButtonText() {
-            return this.mode === 'light' ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro';
+            return this.mode === 'light' ? 'Dark Mode' : 'Light Mode';
         }
     },
     watch: {
