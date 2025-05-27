@@ -406,19 +406,17 @@ new Vue({
                 autoSave: this.autoSave,
                 treeView: this.treeView
             };
-            // Note: localStorage not available in Claude.ai, but keeping structure for when used elsewhere
-            // localStorage.setItem('rpgJsonEditorSettings', JSON.stringify(settings));
+            localStorage.setItem('rpgJsonEditorSettings', JSON.stringify(settings));
         },
 
         loadSettings() {
-            // Note: localStorage not available in Claude.ai, but keeping structure for when used elsewhere
-            // const settings = localStorage.getItem('rpgJsonEditorSettings');
-            // if (settings) {
-            //     const parsed = JSON.parse(settings);
-            //     this.mode = parsed.mode || 'light';
-            //     this.autoSave = parsed.autoSave !== undefined ? parsed.autoSave : true;
-            //     this.treeView = parsed.treeView || false;
-            // }
+            const settings = localStorage.getItem('rpgJsonEditorSettings');
+            if (settings) {
+                const parsed = JSON.parse(settings);
+                this.mode = parsed.mode || 'light';
+                this.autoSave = parsed.autoSave !== undefined ? parsed.autoSave : true;
+                this.treeView = parsed.treeView || false;
+            }
         },
 
         // History Management
@@ -448,7 +446,6 @@ new Vue({
             const cursorPos = textarea.selectionStart;
             const value = textarea.value;
             
-            // Auto-close brackets and quotes
             if (event.inputType === 'insertText') {
                 const char = event.data;
                 let autoComplete = '';
@@ -461,11 +458,10 @@ new Vue({
                         autoComplete = ']';
                         break;
                     case '"':
-                        // Only auto-complete if not already closing a quote
                         if (cursorPos === 0 || value[cursorPos - 2] !== '\\') {
                             const beforeCursor = value.substring(0, cursorPos);
                             const openQuotes = (beforeCursor.match(/"/g) || []).length;
-                            if (openQuotes % 2 === 1) { // Odd number means we're opening a quote
+                            if (openQuotes % 2 === 1) {
                                 autoComplete = '"';
                             }
                         }
