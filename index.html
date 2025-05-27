@@ -41,7 +41,6 @@
         </div>
       </div>
 
-      <!-- Stats Bar -->
       <div class="rpg-stats-bar">
         <div class="stat-item">
           <i class="bi bi-file-code"></i>
@@ -57,7 +56,6 @@
         </div>
       </div>
 
-      <!-- Editor Section -->
       <div class="rpg-section mb-4">
         <div class="rpg-section-header">
           <h3>🔮 Spell Codex (Editor)</h3>
@@ -69,7 +67,7 @@
             @input="handleInput"
             @keydown="handleKeydown"
             rows="15"
-            placeholder="Escribe tu JSON mágico aquí..."
+            placeholder="Pega tu JSON aquí..."
             spellcheck="false"
           ></textarea>
           <div v-if="error" class="rpg-error">
